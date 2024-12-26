@@ -12,8 +12,10 @@ Here are some ideas to get you started:
 -->
 - 🌱 I’m currently learning Data Seience and Machine Learning.
 
-- 📫 How to reach me: ...
+- 📫 How to reach me: vaibhavprakashh@gmail.com
 - 😄 Pronouns: he/him
-- 
+## Programs and Languages
+
+Java,C,C++,Python,R,Linux
 
 
