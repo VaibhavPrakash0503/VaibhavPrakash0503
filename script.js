@@ -30,14 +30,14 @@
   ];
 
   var NEO = [
-    { k:'',       v:'<span class="cm" style="font-weight:700">vaibhav</span><span class="cd">@</span><span class="cm" style="font-weight:700">portfolio</span>' },
-    { k:'',       v:'<span class="cd">\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500</span>' },
-    { k:'OS',     v:'Fedora Linux 43' },
-    { k:'Shell',  v:'zsh' },
-    { k:'Focus',  v:'Backend Dev \u2192 DevOps' },
-    { k:'Status', v:'<span class="cg">open to opportunities</span>' },
-    { k:'',       v:'' },
-    { k:'',       v:'<span style="color:var(--red)">\u2b24</span> <span style="color:var(--peach)">\u2b24</span> <span style="color:var(--yellow)">\u2b24</span> <span style="color:var(--green)">\u2b24</span> <span style="color:var(--teal)">\u2b24</span> <span style="color:var(--blue)">\u2b24</span> <span style="color:var(--mauve)">\u2b24</span> <span style="color:var(--pink)">\u2b24</span>' }
+    { k: '', v: '<span class="cm" style="font-weight:700">vaibhav</span><span class="cd">@</span><span class="cm" style="font-weight:700">portfolio</span>' },
+    { k: '', v: '<span class="cd">\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500</span>' },
+    { k: 'OS', v: 'Fedora Linux 43' },
+    { k: 'Shell', v: 'zsh' },
+    { k: 'Focus', v: 'Backend Dev \u2192 DevOps' },
+    { k: 'Status', v: '<span class="cg">open to opportunities</span>' },
+    { k: '', v: '' },
+    { k: '', v: '<span style="color:var(--red)">\u2b24</span> <span style="color:var(--peach)">\u2b24</span> <span style="color:var(--yellow)">\u2b24</span> <span style="color:var(--green)">\u2b24</span> <span style="color:var(--teal)">\u2b24</span> <span style="color:var(--blue)">\u2b24</span> <span style="color:var(--mauve)">\u2b24</span> <span style="color:var(--pink)">\u2b24</span>' }
   ];
 
   function buildNeofetch() {
@@ -162,10 +162,10 @@
         + '<span class="cg">meshtalk</span><br>'
         + '<span class="cd">use cat &lt;name&gt; to read more</span>';
     },
-    'cat dotfiles':  function() { return projectCard(PROJECTS['dotfiles']); },
+    'cat dotfiles': function() { return projectCard(PROJECTS['dotfiles']); },
     'cat lazylinux': function() { return projectCard(PROJECTS['lazylinux']); },
     'cat steamally': function() { return projectCard(PROJECTS['steamally']); },
-    'cat meshtalk':  function() { return projectCard(PROJECTS['meshtalk']); },
+    'cat meshtalk': function() { return projectCard(PROJECTS['meshtalk']); },
     'skills': function() {
       return '<span class="cm">Languages :</span> Python \u00b7 Go \u00b7 C/C++ \u00b7 Bash \u00b7 Java<br>'
         + '<span class="cm">DevOps    :</span> Docker \u00b7 Kubernetes \u00b7 GitHub Actions \u00b7 Git<br>'
@@ -177,8 +177,7 @@
       return '<span class="cg">opening github.com/VaibhavPrakash0503 ...</span>';
     },
     'resume': function() {
-      /* PLACEHOLDER: replace URL below with your resume PDF link */
-      window.open('#', '_blank');
+      window.open('https://drive.google.com/file/d/1FKeQXJeCJCmDj59rgeGs92UIW6t6mgjU/view?usp=drive_link', '_blank');
       return '<span class="cg">opening resume.pdf ...</span>';
     },
     'contact': function() {
@@ -194,7 +193,7 @@
   };
 
   function esc(s) {
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
   /* COMMAND HISTORY */
@@ -250,7 +249,7 @@
     out.innerHTML = handler
       ? handler()
       : '<span class="cd">zsh: command not found: </span><span class="cr">'
-          + esc(raw) + '</span>  <span class="cd">(type <span class="cb">help</span>)</span>';
+      + esc(raw) + '</span>  <span class="cd">(type <span class="cb">help</span>)</span>';
 
     twBody.appendChild(out);
     twBody.scrollTop = twBody.scrollHeight;
@@ -258,11 +257,11 @@
 
   /* ACTIVE NAV TAB */
   var tabMap = {
-    '~':        'hero',
-    'about':    'about-section',
-    'skills':   'skills-section',
+    '~': 'hero',
+    'about': 'about-section',
+    'skills': 'skills-section',
     'projects': 'projects-section',
-    'contact':  'contact-section'
+    'contact': 'contact-section'
   };
   var navTabs = document.querySelectorAll('.tb-tab');
 
