@@ -32,13 +32,12 @@
   var NEO = [
     { k: '', v: '<span class="cm" style="font-weight:700">vaibhav</span><span class="cd">@</span><span class="cm" style="font-weight:700">portfolio</span>' },
     { k: '', v: '<span class="cd">\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500</span>' },
-    { k: 'OS', v: 'Fedora Linux 43' },
+    { k: 'OS', v: 'Fedora Linux' },
     { k: 'Shell', v: 'zsh' },
     { k: 'Uptime', v: '<span id="uptime">calculating...</span>' },
     { k: 'Focus', v: 'Backend Dev \u2192 DevOps' },
     { k: 'Status', v: '<span class="cg">open to opportunities</span>' },
     { k: 'Theme', v: 'Catppuccin Mocha 🐱' },
-    { k: 'Bio', v: 'Backend developer in Python, Go and Java, targeting backend engineering roles with a long-term focus on DevOps and infrastructure.' },
     { k: '', v: '<span style="color:var(--red)">\u2b24</span> <span style="color:var(--peach)">\u2b24</span> <span style="color:var(--yellow)">\u2b24</span> <span style="color:var(--green)">\u2b24</span> <span style="color:var(--teal)">\u2b24</span> <span style="color:var(--blue)">\u2b24</span> <span style="color:var(--mauve)">\u2b24</span> <span style="color:var(--pink)">\u2b24</span>' }
   ];
 
