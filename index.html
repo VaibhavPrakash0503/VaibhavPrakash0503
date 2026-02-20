@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vaibhav Prakash ~ ~/portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="ps://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
   --base:     #1e1e2e;
@@ -56,7 +56,7 @@ body{background:var(--base);color:var(--text);font-family:'JetBrains Mono',monos
 #hero{min-height:100vh;padding-top:32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;position:relative;overflow:hidden}
 #hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--surface0) 1px,transparent 1px),linear-gradient(90deg,var(--surface0) 1px,transparent 1px);background-size:44px 44px;opacity:.1;pointer-events:none}
 #hero::after{content:'';position:absolute;top:15%;left:50%;transform:translateX(-50%);width:700px;height:480px;background:radial-gradient(ellipse,rgba(203,166,247,.07) 0%,transparent 68%);pointer-events:none}
-.terminal-window{width:min(780px,94vw);background:var(--mantle);border:1px solid var(--surface1);border-radius:10px;box-shadow:0 28px 72px rgba(0,0,0,.65),0 0 0 1px var(--surface0);position:relative;z-index:1;animation:fadeUp .6s ease both}
+.terminal-window{width:860px;background:var(--mantle);border:1px solid var(--surface1);border-radius:10px;box-shadow:0 28px 72px rgba(0,0,0,.65),0 0 0 1px var(--surface0);position:relative;z-index:1;animation:fadeUp .6s ease both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 .tw-titlebar{background:var(--crust);border-radius:10px 10px 0 0;border-bottom:1px solid var(--surface0);padding:10px 16px;display:flex;align-items:center;gap:8px}
 .tw-dot{width:12px;height:12px;border-radius:50%}
@@ -64,7 +64,7 @@ body{background:var(--base);color:var(--text);font-family:'JetBrains Mono',monos
 .tw-dot.y{background:var(--yellow)}
 .tw-dot.g{background:var(--green)}
 .tw-wintitle{flex:1;text-align:center;color:var(--subtext0);font-size:12px;margin-left:-48px}
-.tw-body{padding:22px 24px;min-height:260px;max-height:400px;overflow-y:auto}
+.tw-body{padding:22px 24px;height:380px;overflow-y:auto}
 .tl{display:flex;align-items:flex-start;margin-bottom:2px}
 .tl-p{color:var(--green);white-space:nowrap;margin-right:8px;flex-shrink:0;font-size:13px}
 .tl-p .u{color:var(--blue)}
@@ -447,9 +447,8 @@ footer b{color:var(--mauve);font-weight:500}
 
 <!-- FOOTER -->
 <footer>
-  <b>vaibhav@portfolio</b>:~$
+  <b>vaibhav@portfolio</b>
   <span>built on fedora linux &middot; catppuccin mocha</span>
-  <span></span>
 </footer>
 
 <script src="script.js"></script>
