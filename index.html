@@ -177,6 +177,93 @@ section{max-width:920px;margin:0 auto;padding:72px 24px;border-top:1px solid var
 /* FOOTER */
 footer{border-top:1px solid var(--surface0);background:var(--crust);padding:18px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--overlay0)}
 footer b{color:var(--mauve);font-weight:500}
+
+@media (max-width: 768px) {
+
+  /* ── topbar ── */
+  #topbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 6px 12px;
+    gap: 4px;
+    justify-content: flex-start;
+  }
+  .tb-left {width: 100%; }
+  .tb-tabs {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    gap: 2px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .tb-tab { font-size: 10px; padding: 4px 10px; width: auto-fit }
+  .tb-right { display: none; }
+  .tb-session { font-size: 11px; }
+
+  /* ── hero padding to account for taller topbar ── */
+  #hero { padding-top: 70px; }
+
+  /* ── terminal ── */
+  .terminal-window { width: 95vw;}
+  .tw-body { height: 3400px; padding: 12px 14px; font-size: 12px; }
+
+
+  /* fix input row overflow ── */
+  .term-input-row {
+    padding: 10px 14px;
+      overflow: hidden;
+  }
+  .tl-prompt { font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+  #term-input { font-size: 12px; min-width: 0; width: 100%; }
+
+  /* ── sections ── */
+  section { padding: 48px 16px; }
+
+  /* ── neofetch / about ── */
+  .neofetch {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .ascii { font-size: 9px; }
+  .neo-row { flex-wrap: wrap; }
+  .nk { min-width: 72px; }
+  .neo-bio { font-size: 12px; }
+
+  /* ── skills ── */
+  .skills-wrap { grid-template-columns: 1fr; }
+  .sbar-name { width: 64px; font-size: 11px; }
+
+  /* ── projects ── */
+  .projects-grid { grid-template-columns: 1fr; }
+  .pkg-card { padding: 16px; }
+  .pkg-name { font-size: 14px; }
+  .pkg-row { font-size: 11px; }
+  .pkg-desc { font-size: 12px; }
+  .pkg-links { flex-wrap: wrap; }
+
+  /* ── contact ── */
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  /* ── footer ── */
+  footer {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tw-body { height: 240px; font-size: 11px; }
+  .ascii { display: none; }
+  .pkg-card { padding: 14px; }
+}
 </style>
 </head>
 <body>
