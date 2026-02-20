@@ -34,9 +34,11 @@
     { k: '', v: '<span class="cd">\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500</span>' },
     { k: 'OS', v: 'Fedora Linux 43' },
     { k: 'Shell', v: 'zsh' },
+    { k: 'Uptime', v: '<span id="uptime">calculating...</span>' },
     { k: 'Focus', v: 'Backend Dev \u2192 DevOps' },
     { k: 'Status', v: '<span class="cg">open to opportunities</span>' },
-    { k: '', v: '' },
+    { k: 'Theme', v: 'Catppuccin Mocha 🐱' },
+    { k: 'Bio', v: 'Backend developer in Python, Go and Java, targeting backend engineering roles with a long-term focus on DevOps and infrastructure.' },
     { k: '', v: '<span style="color:var(--red)">\u2b24</span> <span style="color:var(--peach)">\u2b24</span> <span style="color:var(--yellow)">\u2b24</span> <span style="color:var(--green)">\u2b24</span> <span style="color:var(--teal)">\u2b24</span> <span style="color:var(--blue)">\u2b24</span> <span style="color:var(--mauve)">\u2b24</span> <span style="color:var(--pink)">\u2b24</span>' }
   ];
 
@@ -298,5 +300,16 @@
       t.classList.toggle('active', tabMap[key] === cur || (key === '~' && cur === 'hero'));
     });
   }, { passive: true });
+
+  const start = Date.now();
+
+  setInterval(() => {
+    const el = document.getElementById('uptime');
+    if (!el) return;
+    const s = Math.floor((Date.now() - start) / 1000);
+    const m = Math.floor(s / 60);
+    const h = Math.floor(m / 60);
+    el.textContent = h > 0 ? `${h}h ${m % 60}m ${s % 60}s` : m > 0 ? `${m}m ${s % 60}s` : `${s}s`;
+  }, 1000);
 
 })();
