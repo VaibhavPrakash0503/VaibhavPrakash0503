@@ -141,18 +141,19 @@
   /* COMMANDS */
   var CMDS = {
     'help': function() {
-      return '<span class="cm">available commands:</span><br>'
-        + '<span class="cb">vaibhav --info</span>       show system info<br>'
-        + '<span class="cb">ls projects</span>          list all projects<br>'
-        + '<span class="cb">cat dotfiles</span>         project details<br>'
-        + '<span class="cb">cat lazylinux</span>        project details<br>'
-        + '<span class="cb">cat steamally</span>        project details<br>'
-        + '<span class="cb">cat meshtalk</span>         project details<br>'
-        + '<span class="cb">skills</span>               show tech stack<br>'
-        + '<span class="cb">github</span>               open GitHub profile<br>'
-        + '<span class="cb">resume</span>               open resume PDF<br>'
-        + '<span class="cb">contact</span>              show contact info<br>'
-        + '<span class="cb">clear</span>                clear terminal';
+      return '<pre style="font-family:inherit;font-size:inherit;line-height:2">'
+        + '<span class="cm">available commands:</span>\n\n'
+        + '<span class="cb">vaibhav --info</span>             show system info\n'
+        + '<span class="cb">sudo hire-me</span>               requires root privileges (recruiter only)\n'
+        + '<span class="cb">ls projects</span>                list all projects\n'
+        + '<span class="cb">cat &lt;project name&gt;</span>         project details\n'
+        + '<span class="cb">skills</span>                     show tech stack\n'
+        + '<span class="cb">github</span>                     open GitHub profile\n'
+        + '<span class="cb">resume</span>                     open resume\n'
+        + '<span class="cb">contact</span>                    show contact info\n'
+        + '<span class="cb">clear</span>                      clear terminal\n'
+        + '<span class="cb">help</span>                       show this help'
+        + '</pre>';
     },
     'vaibhav --info': function() { return buildNeofetch(); },
     'ls projects': function() {
@@ -173,11 +174,15 @@
         + '<span class="cm">Systems   :</span> Linux \u00b7 ESP-IDF \u00b7 FreeRTOS \u00b7 BLE Mesh';
     },
     'github': function() {
-      window.open('https://github.com/VaibhavPrakash0503', '_blank');
+      setTimeout(() => {
+        window.open('https://github.com/VaibhavPrakash0503', '_blank');
+      }, 1000);
       return '<span class="cg">opening github.com/VaibhavPrakash0503 ...</span>';
     },
     'resume': function() {
-      window.open('https://drive.google.com/file/d/1FKeQXJeCJCmDj59rgeGs92UIW6t6mgjU/view?usp=drive_link', '_blank');
+      setTimeout(() => {
+        window.open('https://drive.google.com/file/d/1FKeQXJeCJCmDj59rgeGs92UIW6t6mgjU/view?usp=drive_link', '_blank');
+      }, 1000);
       return '<span class="cg">opening resume.pdf ...</span>';
     },
     'contact': function() {
@@ -187,9 +192,27 @@
         + '<span class="cm">phone   </span>: +91 91995 96081';
     },
     'sudo hire-me': function() {
-      return '[sudo] password for recruiter: <span class="cd">\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022</span><br>'
-        + '<span class="cg">\u2713 access granted. opening resume ...</span>';
-    }
+      const steps = [
+        'Authenticating recruiter...',
+        'Checking qualifications...',
+        'Verifying linux knowledge...',
+        'Compiling candidate profile...',
+        'Access granted. Opening resume...'
+      ];
+      steps.forEach((step, i) => {
+        setTimeout(() => {
+          const el = document.createElement('div');
+          el.className = 'tl-out';
+          el.innerHTML = `<span class="c-dim">[${i + 1}/5]</span> <span class="c-green">${step}</span>`;
+          twBody.appendChild(el);
+          twBody.scrollTop = twBody.scrollHeight;
+        }, i * 600);
+      });
+      setTimeout(() => {
+        window.open('https://drive.google.com/file/d/1FKeQXJeCJCmDj59rgeGs92UIW6t6mgjU/view?usp=drive_link', '_blank'); // 🔗 your resume link
+      }, 3500);
+      return '[sudo] password for recruiter: <span class="c-dim">••••••••</span>';
+    },
   };
 
   function esc(s) {

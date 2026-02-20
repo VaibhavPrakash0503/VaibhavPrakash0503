@@ -178,6 +178,14 @@ section{max-width:920px;margin:0 auto;padding:72px 24px;border-top:1px solid var
 footer{border-top:1px solid var(--surface0);background:var(--crust);padding:18px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--overlay0)}
 footer b{color:var(--mauve);font-weight:500}
 
+a.cert-card {
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+}
+a.cert-card:hover {
+  border-color: var(--green);
+}
 @media (max-width: 768px) {
 
   /* ── topbar ── */
@@ -285,7 +293,7 @@ footer b{color:var(--mauve);font-weight:500}
   </div>
   <div class="tb-right">
     <span id="clock">--:--:--</span>
-    &nbsp;|&nbsp; fedora 43 &middot; linux
+    &nbsp;|&nbsp; fedora &middot; linux
   </div>
 </div>
 
@@ -482,12 +490,12 @@ footer b{color:var(--mauve);font-weight:500}
     <span class="sec-label">certs</span>
   </div>
   <div class="cert-list">
-    <div class="cert-card">
+    <a href="https://www.kaggle.com/learn/certification/vaibhavprakash0503/python" target="_blank" rel="noopener" class="cert-card">
       <div>
         <div class="cert-name">Python Certification</div>
         <div class="cert-issuer">Kaggle &nbsp;&middot;&nbsp; Feb 14, 2024</div>
       </div>
-    </div>
+    </a>
     <div class="cert-card">
       <div>
         <div class="cert-name">Linux 101 &mdash; LFS101</div>
