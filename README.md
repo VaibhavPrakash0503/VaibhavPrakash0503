@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Vaibhav Prakash</h1>
 <h3 align="center">A passionate backend developer</h3>
 
-- 👨‍💻 All of my projects are available at [https://vaibhavprakash0503.github.io/VaibhavPrakash0503/](https://vaibhavprakash0503.github.io/VaibhavPrakash0503/)
+- 👨‍💻 All of my projects are available at [portfolio](https://vaibhavprakash0503.github.io/VaibhavPrakash0503/)
 
 - 📫 How to reach me **vaibhav.prk05@gmail.com**
 
